@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Nutrition & Fitness Planner</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Navigation -->
+<nav>
+  <div class="nav-container">
+    <h1 class="logo">Nutrition & Fitness Planner</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Main Container -->
+<main class="container">
+  <section id="dashboard">
+
+    <!-- Summary Section -->
+    <div class="card full-width">
+      <h2>Today's Progress</h2>
+      <div class="progress">
+        <label>Calories</label>
+        <div class="bar"><div id="calorieBar" class="fill" style="width:0%"></div></div>
+        <span id="calorieText">0 / 2000 kcal</span>
+      </div>
+      <div class="progress">
+        <label>Protein</label>
+        <div class="bar"><div id="proteinBar" class="fill" style="width:0%"></div></div>
+        <span id="proteinText">0 / 150 g</span>
+      </div>
+      <div class="progress">
+        <label>Carbs</label>
+        <div class="bar"><div id="carbsBar" class="fill" style="width:0%"></div></div>
+        <span id="carbsText">0 / 250 g</span>
+      </div>
+      <div class="progress">
+        <label>Fat</label>
+        <div class="bar"><div id="fatBar" class="fill" style="width:0%"></div></div>
+        <span id="fatText">0 / 70 g</span>
+      </div>
+    </div>
+
+    <!-- Food Logging -->
+    <div class="card">
+      <h2>Log Food</h2>
+      <input type="text" id="foodInput" placeholder="e.g., 2 boiled eggs">
+      <button onclick="logFood()">Add</button>
+      <div id="foodList" class="scrollable"></div>
+    </div>
+
+    <!-- Meal Plan -->
+    <div class="card">
+      <h2>Meal Plan Suggestions</h2>
+      <ul id="mealPlan">
+        <li>Breakfast: Oatmeal with banana</li>
+        <li>Lunch: Grilled chicken with rice</li>
+        <li>Dinner: Fish with vegetables</li>
+      </ul>
+    </div>
+
+    <!-- Workout Tip -->
+    <div class="card">
+      <h2>Workout Tip of the Day</h2>
+      <p id="workoutTip">Push yourself, but don't forget to rest!</p>
+    </div>
+
+    <!-- AI Chatbot -->
+    <div class="card full-width">
+      <h2>AI Fitness Chat</h2>
+      <div id="chatBox" class="scrollable"></div>
+      <input type="text" id="chatInput" placeholder="Ask AI...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+
+  </section>
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
